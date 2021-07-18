@@ -1,6 +1,15 @@
+//-----------------------------------------------------------------------------
+// Search.js
+// inputと検索ボタンを含むフォーム周りの表示
+// 親コンポーネントから渡される検索キーワードをpropsで受け取り、検索処理を実行
+//-----------------------------------------------------------------------------
+
+
 import React, { useState } from "react";
 
 const Search= (props) => {
+  //stateの初期値を設定
+  //検索入力フィールドの値を渡す
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearchInputChanges = (e) => {
