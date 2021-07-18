@@ -9,5 +9,9 @@ React+フックで映画検索アプリを作成する。
 - create-react-app
 - JSX
 
+## 環境構築
+### Version
+node: v10以上
+
 ### 構造
 -
