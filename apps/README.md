@@ -9,6 +9,7 @@ React+フックで映画検索アプリを作成する。
 - create-react-app
 - JSX
   
+  
 # 学習メモ
 ## props
 親コンポーネントから子コンポーネントへ値を渡すための仕組み
@@ -30,7 +31,8 @@ stateを更新すると、変更が必要なcomponentが自動で再読み込み
 ***
 [propsとstateのイメージをつかむ【はじめてのReact】](https://qiita.com/rio_threehouse/items/7632f5a593cf218b9504)  
 [React.js チュートリアル[超入門] #05 Stateを使った情報管理](https://note.com/natsukingdom/n/ne81d079623b3)
-
+  
+  
 ## React hooks
 ### useStateとは
 useState()は、関数コンポーネントでstateを管理（stateの保持と更新）するためのReactフック
@@ -54,9 +56,11 @@ useEffect(() => {
 [React hooksを基礎から理解する (useState編)](https://qiita.com/seira/items/f063e262b1d57d7e78b4) 
 [React hooksを基礎から理解する (useEffect編)](https://qiita.com/seira/items/e62890f11e91f6b9653f) 
   
+  
 ## 環境構築
 ### Version
 node: v10以上
+  
   
 ### 構造
 -
