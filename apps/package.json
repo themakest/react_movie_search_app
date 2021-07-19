@@ -20,6 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://themakest.github.io/react_movie_search_app",
   "eslintConfig": {
     "extends": [
       "react-app",
