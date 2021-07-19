@@ -8,8 +8,7 @@ React+フックで映画検索アプリを作成する。
 - ReactおよびHooks
 - create-react-app
 - JSX
-  
-  
+
 # 学習メモ
 ## props
 親コンポーネントから子コンポーネントへ値を渡すための仕組み
@@ -20,6 +19,7 @@ React+フックで映画検索アプリを作成する。
 ### propsの注意点
 ・子から親へ値を渡すことはできない  
 ・propsの値を動的に変更することはできない
+
 ## state
 各コンポーネントごとに持つ、コンポーネントの状態を管理する仕組み  
 コンポーネント上でやりとりされる情報をstate（状態）として管理する  
@@ -31,11 +31,15 @@ stateを更新すると、変更が必要なcomponentが自動で再読み込み
 ***
 [propsとstateのイメージをつかむ【はじめてのReact】](https://qiita.com/rio_threehouse/items/7632f5a593cf218b9504)  
 [React.js チュートリアル[超入門] #05 Stateを使った情報管理](https://note.com/natsukingdom/n/ne81d079623b3)
-  
-  
+
+
 ## React hooks
 ### useStateとは
 useState()は、関数コンポーネントでstateを管理（stateの保持と更新）するためのReactフック
+```
+/* const [状態変数, 状態を変更するための関数] = useState(状態の初期値); */
+const [count, setCount] = useState(initialState)
+```
 
 ### useEffectとは
 useEffectに渡された関数はレンダーの結果が画面に反映された後に動作する  
@@ -43,7 +47,7 @@ useEffectに渡された関数はレンダーの結果が画面に反映され�
 副作用の処理（DOMの書き換え、変数代入、API通信などUI構築以外の処理）を関数コンポーネントで扱える
 ```
 useEffect(() => {
-  /* 第1引数には実行させたい副作用関数を記述*/
+  /* 第1引数には実行させたい副作用関数を記述 */
   console.log('副作用関数が実行されました！')
 },[依存する変数の配列]) // 第2引数には副作用関数の実行タイミングを制御する依存データを記述
 ```
@@ -51,12 +55,14 @@ useEffect(() => {
 | ------- | ---------------------------------------------------------------- | :------: | 
 | 第1引数 | 副作用関数（戻り値はクリーンアップ関数、または何も返さない）     | 関数     | 
 | 第2引数 | 副作用関数の実行タイミングを制御する依存データが入る（省略可能） | 配列     | 
-  
 ***
 [React hooksを基礎から理解する (useState編)](https://qiita.com/seira/items/f063e262b1d57d7e78b4) 
 [React hooksを基礎から理解する (useEffect編)](https://qiita.com/seira/items/e62890f11e91f6b9653f) 
-  
-  
+
+## 条件分岐
+[React.jsのJSXで条件分岐を表現する方法](https://www.yoheim.net/blog.php?q=20180409)
+
+
 ## 環境構築
 ### Version
 node: v10以上
