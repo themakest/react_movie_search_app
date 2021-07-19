@@ -6,7 +6,9 @@
 
 
 import React, { useState, useEffect } from "react";
-import "../App.css";
+import classnames from 'classnames'
+import globalStyles from '../assets/global-styles/bootstrap.min.module.css'
+import classes from './App.module.css'
 import Header from "./Header";
 import Movie from "./Movie";
 import Search from "./Search";
@@ -56,17 +58,17 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-    <Header text="React Moive Search" />
+    <div className={classes.App}>
+    <Header text="React Moive Search App" />
     <Search
     search={search}
     placeholder="キーワードを入力"
     />
-    <div className="movies">
+    <div className={classes.searchResult}>
       {
-        loading && !errorMessage ? ( <span>loading...</span>) :
-        errorMessage ? ( <div className="errorMessage">{errorMessage}</div>) :
-        resetMessage ? ( <div className="errorMessage">{resetMessage}</div>) :
+        loading && !errorMessage ? ( <div className={classes.statusMessage}>...Loading</div>) :
+        errorMessage ? ( <div className={classes.statusMessage}>{errorMessage}</div>) :
+        resetMessage ? ( <div className={classes.statusMessage}>{resetMessage}</div>) :
         (
           movies.map((movie, index) => (
           <Movie key={`${index}-${movie.Title}`} movie={movie} />
@@ -78,7 +80,14 @@ const App = () => {
         resetMessage ? ('') :
         loading ? ('') :
         errorMessage ? ('') :
-        (<input onClick={resetSearch} type="button" value="CLEAR" />)
+        (<input className={
+          classnames(
+            globalStyles.btn,
+            globalStyles['btn-primary'],
+            classes.clearBtn
+          )}
+          onClick={resetSearch} type="button" value="CLEAR"
+        />)
       }
     </div>
   );

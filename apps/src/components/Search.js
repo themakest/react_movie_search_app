@@ -6,6 +6,9 @@
 
 
 import React, { useState } from "react";
+import classnames from 'classnames'
+import globalStyles from '../assets/global-styles/bootstrap.min.module.css'
+import classes from './Search.module.css'
 
 const Search= (props) => {
   //stateの初期値を設定
@@ -28,13 +31,22 @@ const Search= (props) => {
 
   return (
     <form className="search">
+      <div className={classes.searchForm}>
       <input
         value={searchValue}
         onChange={handleSearchInputChanges}
         type="text"
         placeholder={props.placeholder}
+        className={globalStyles['form-control']}
       />
-      <input onClick={callSearchFunction} type="submit" value="SEARCH" />
+      <input className={
+        classnames(
+          globalStyles.btn,
+          globalStyles['btn-primary'],
+          classes.searchBtn
+        )}
+        onClick={callSearchFunction} type="submit" value="SEARCH" />
+      </div>
     </form>
   );
 }

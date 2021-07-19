@@ -5,11 +5,12 @@
 
 
 import React from "react";
+import classes from './Header.module.css'
 
 const Header = (props) => {
   return (
-    <header className="App-header">
-      <h2>{props.text}</h2>
+    <header className={classes.AppHeader}>
+      <h1 className={classes.AppHeaderTitle}>{props.text}</h1>
     </header>
   );
 };

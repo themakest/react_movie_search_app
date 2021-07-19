@@ -1,0 +1,30 @@
+.items{
+  margin-bottom: 50px;
+  margin-left: 12px;
+  width: 190px;
+}
+
+.items:first-child{
+  margin-left: 0;
+}
+
+.items:nth-child(5n+1){
+  margin-left: 0;
+}
+
+.info{
+  margin-top: 12px;
+  text-align: left;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.year{
+  font-size: 12px;
+}
+
+.thumb{
+  width: 100%;
+}

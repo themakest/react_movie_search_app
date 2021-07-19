@@ -1,0 +1,11 @@
+.AppHeader{
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.AppHeaderTitle{
+  color: #00ACC1;
+  font-weight: bold;
+  font-size: 80px;
+}

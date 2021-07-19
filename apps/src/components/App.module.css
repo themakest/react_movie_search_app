@@ -1,0 +1,35 @@
+.App {
+  padding-bottom: 100px;
+  background-color: #C5CAE9;
+  height: 100%;
+}
+
+.searchResult{
+  margin: 50px auto 0;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.clearBtn{
+  margin: 30px auto 0;
+  display: block;
+  background-color: #fff;
+  border-color: #00ACC1;
+  color: #00ACC1;
+}
+
+.clearBtn:hover{
+  background-color: #00ACC1;
+  border-color: #00ACC1;
+  color: #fff;
+}
+
+.statusMessage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+}

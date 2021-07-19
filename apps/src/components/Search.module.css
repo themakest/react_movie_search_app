@@ -1,0 +1,15 @@
+.searchForm{
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+}
+.searchBtn{
+  margin-top: 20px;
+  background-color: #A1887F;
+  border-color: #A1887F;
+}
+
+.searchBtn:hover{
+  background-color: #00ACC1;
+  border-color: #00ACC1;
+}
