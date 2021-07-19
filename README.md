@@ -65,8 +65,11 @@ useEffect(() => {
 
 ## 環境構築
 ### Version
-node: v10以上
-  
-  
-### 構造
--
+node: v10以上  
+npm: 7.3.0以上  
+yarn: 1.22.10以上
+
+### Deploy
+```
+git subtree push --prefix apps/build origin gh-pages
+```
