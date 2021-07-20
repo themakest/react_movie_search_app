@@ -41,11 +41,14 @@ const App = () => {
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === "True") {
+          console.log(jsonResponse.Search)
           setMovies(jsonResponse.Search);
           setLoading(false);
           setResetMessage(null);
+          setErrorMessage(null);
         }
         else {
+          console.log(jsonResponse.Error)
           setErrorMessage(jsonResponse.Error);
           setLoading(false);
           setResetMessage(null);
