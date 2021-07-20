@@ -13,8 +13,8 @@ import Header from "./Header";
 import Movie from "./Movie";
 import Search from "./Search";
 
-
-const MOVIE_API_URL = "https://www.omdbapi.com/?apikey=1acc884d&s=potter";
+const apiKey = process.env.REACT_APP_API_KEY;
+const MOVIE_API_URL = `https://www.omdbapi.com/?apikey=${apiKey}&s=potter`;
 
 const App = () => {
   //stateの初期値を設定
@@ -37,18 +37,16 @@ const App = () => {
     setLoading(true);
     setResetMessage(null);
 
-    fetch(`https://www.omdbapi.com/?apikey=1acc884d&s=${searchValue}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchValue}`)
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === "True") {
-          console.log(jsonResponse.Search)
           setMovies(jsonResponse.Search);
           setLoading(false);
           setResetMessage(null);
           setErrorMessage(null);
         }
         else {
-          console.log(jsonResponse.Error)
           setErrorMessage(jsonResponse.Error);
           setLoading(false);
           setResetMessage(null);
