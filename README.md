@@ -69,7 +69,19 @@ node: v10以上
 npm: 7.3.0以上  
 yarn: 1.22.10以上
 
+### Install
+`yarn install`
+
+### Development
+`yarn start`
+
+### Build
+`yarn build`
+
 ### Deploy
+GitHub Pagesへデプロイ  
+`gh-pages` ブランチに `apps/build` 配下をpush  
+`gh-pages` ブランチをデプロイする  
 ```
 git subtree push --prefix apps/build origin gh-pages
 ```
