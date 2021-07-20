@@ -59,7 +59,7 @@ const App = () => {
 
   return (
     <div className={classes.App}>
-    <Header text="React Moive Search App" />
+    <Header text="React Movie Search App" />
     <Search
     search={search}
     placeholder="キーワードを入力"
